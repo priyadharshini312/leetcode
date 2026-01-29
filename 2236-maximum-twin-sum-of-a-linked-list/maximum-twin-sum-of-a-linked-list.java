@@ -17,22 +17,20 @@ class Solution {
             first=first.next.next;
 
         }
-        ListNode temp=null;
-        ListNode store=second;
-        while(store!=null){
-            ListNode temp1=store.next;
-            store.next=temp;
-            temp=store;
-            store=temp1;
+        ListNode prev=null;
+        ListNode next=null;
+        while(second!=null){
+            next=second.next;
+            second.next=prev;
+            prev=second;
+            second=next;
         }
         int max=0;
-        ListNode one=head;
-        ListNode two=temp;
-        while(two!=null){
-            int sum=one.val+two.val;
+        while(prev!=null){
+            int sum=prev.val+head.val;
             max=Math.max(max,sum);
-            one=one.next;
-            two=two.next;
+            prev=prev.next;
+            head=head.next;
         }
         return max;
         
