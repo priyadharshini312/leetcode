@@ -15,6 +15,6 @@ class Solution {
         for(int i=0;i<arr.length;i++){
             nums[i]=arr[i];
         }
-        //System.out.print(nums[i]);
+       
     }
 }
