@@ -18,7 +18,7 @@ class Solution {
         int m2=Integer.MAX_VALUE;
         for(int i=0;i<landDuration.length;i++){
             int f=Math.max(m1,landStartTime[i])+landDuration[i];
-                    m2=Math.min(m2,f);
+            m2=Math.min(m2,f);
                 
             
         }
