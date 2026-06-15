@@ -1,8 +1,15 @@
 class Solution {
     public int smallestEvenMultiple(int n) {
-        if(n%2==0){
+        /*if(n%2==0){
             return n;
         }
         return n*2;
+        if(n%2!=0){
+            return n*2;
+        }
+        else{
+        return n;
+        }*/
+        return n*(n%2+1);
     }
 }
