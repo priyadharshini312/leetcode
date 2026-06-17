@@ -11,7 +11,7 @@ class Solution {
         for(int i=0;i<prefix.length;i++){
             sum+=prefix[i];
         }
-        return sum/time;*/
+        return sum/time;
         int start=1;
         int dir=1;
         for(int i=1;i<=time;i++){
@@ -23,6 +23,14 @@ class Solution {
              }
              start+=dir;
         }
-        return start;
+        return start;*/
+        int cycle=n-1;
+        int round=time/cycle;
+        int pos=time%cycle;
+        if(round%2==0){
+            return 1+pos;
+        }
+            return n-pos;
+        
     }
 }
