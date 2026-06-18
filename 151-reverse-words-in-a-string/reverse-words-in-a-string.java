@@ -1,6 +1,6 @@
 class Solution {
     public String reverseWords(String s) {
-        /*String s1=s.trim().replaceAll("\\s+"," ");
+        String s1=s.trim().replaceAll("\\s+"," ");
         String arr[]=s1.split(" ");
         String ar[]=new String[arr.length];
         int j=0;
@@ -9,8 +9,8 @@ class Solution {
             j++;
         }
         String m=String.join(" ",ar);
-        return m.trim().replaceAll("\\s+"," ");*/
-        String m="";
+        return m.trim().replaceAll("\\s+"," ");
+        /*String m="";
         String l="";
         String s1=s.trim().replaceAll("\\s+"," ");
         int n=s1.length();
@@ -22,6 +22,6 @@ class Solution {
         }
                 l+=s1.substring(0,n);
         
-        return l;
+        return l;*/
     }
 }
