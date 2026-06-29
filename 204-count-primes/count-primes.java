@@ -1,0 +1,45 @@
+class Solution {
+    public int countPrimes(int n) {
+       /*if(n<=2){
+        return 0;
+       }
+       int val=0;
+       int count=0;
+       for(int i=2;i<n;i++){
+         count=0;
+        for(int j=2;j*j<=i;j++){
+            if(i%j==0){
+                count++;
+                break;
+            }
+        }
+        if(count==0){
+            val++;
+        }
+       }
+         
+
+       return val;*/
+       int count=0;
+       if(n<=2){
+        return 0;
+       }
+       boolean prime[]=new boolean[n];
+       for(int i=0;i<n;i++){
+        prime[i]=true;
+       }
+       for(int i=2;i*i<n;i++){
+        if(prime[i]){
+            for(int j=i*i;j<n;j+=i){
+                prime[j]=false;
+            }
+        }
+       }
+       for(int i=2;i<n;i++){
+        if(prime[i]){
+            count++;
+        }
+       }
+       return count;
+    }
+}
