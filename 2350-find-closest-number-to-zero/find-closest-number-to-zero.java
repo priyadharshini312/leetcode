@@ -1,6 +1,6 @@
 class Solution {
     public int findClosestNumber(int[] nums) {
-        int val=Integer.MAX_VALUE;
+        /*int val=Integer.MAX_VALUE;
         int min=0;
         HashMap<Integer,Integer> map=new HashMap<>();
         for(int i=0;i<nums.length;i++){
@@ -13,6 +13,16 @@ class Solution {
             }
              else if(map.get(key)==map.get(min)){
                 min=Math.max(min,key);
+            }
+        }
+        return min;*/
+        int min=nums[0];
+        for(int num:nums){
+            if(Math.abs(num)<Math.abs(min)){
+                min=num;
+            }
+            else if(Math.abs(num)==Math.abs(min)){
+                min=Math.max(num,min);
             }
         }
         return min;
