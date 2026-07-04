@@ -7,7 +7,7 @@ class Solution {
                       if(nums[j]==target){
                         count++;
                       }
-                   if(count>((j-i)+1)/2){
+                   if(2*count>((j-i)+1)){
                     val++;
                    }
             }
