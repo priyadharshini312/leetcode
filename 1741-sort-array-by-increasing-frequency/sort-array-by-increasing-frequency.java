@@ -1,7 +1,7 @@
 class Solution {
     public int[] frequencySort(int[] nums) {
         int j=0;
-        LinkedHashMap<Integer,Integer> map=new LinkedHashMap<>();
+        HashMap<Integer,Integer> map=new HashMap<>();
         for(int num:nums){
             map.put(num,map.getOrDefault(num,0)+1);
         }
