@@ -8,9 +8,21 @@ class Solution {
                 arr[n--]=nums[i]*nums[i];
                 i++;
             }
-            else{
+            else if(Math.abs(nums[j])>Math.abs(nums[i])){
                 arr[n--]=nums[j]*nums[j];
                 j--;
+            }
+            else{
+                if(i==j){
+                    arr[n--]=nums[i]*nums[i];
+                    i++;
+                }
+                else{
+                arr[n--]=nums[i]*nums[i];
+                arr[n--]=nums[j]*nums[j];
+                i++;
+                j--;
+                }
             }
         }
         return arr;
