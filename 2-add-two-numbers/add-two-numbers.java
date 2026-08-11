@@ -20,7 +20,7 @@ class Solution {
                 carry=0;
             }
             else{
-                int value=l1.val+l2.val+carry;
+                int value=num;
                 int digit=value%10;
                 temp.next=new ListNode(digit);
                 carry=value/10;
