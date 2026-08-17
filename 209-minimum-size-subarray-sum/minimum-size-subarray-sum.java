@@ -1,10 +1,9 @@
 class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         int left=0;
-        int right=0;
         int min=nums.length+1;
         int sum=0;
-        while(right<nums.length && left<nums.length){
+        for(int right=0;right<nums.length;right++){
            sum+=nums[right];
             while(sum>=target){
                 min=Math.min(min,right-left+1);
@@ -12,7 +11,7 @@ class Solution {
                 left++;
             }
            
-                right++;
+              
             
         }
         return min==nums.length+1?0:min;
